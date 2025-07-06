@@ -11,10 +11,10 @@
       organization: [Newcastle University],
       location: [Newcastle Upon Tyne, England],
       email: "t.mesquita-santos-verissimo2@newcastle.ac.uk",
-      url: "math.ue.edu/~jdoe"
+      url: "https://tiagoverissimokrypton.medium.com"
     ),
   ),
-  abstract: "Number Theory Chapter",
+  abstract: "Apanhado de Teoria dos Numeros para a mente educada em STEM.",
   bibliography: bibliography("refs.bib"),
 )
 
@@ -23,16 +23,14 @@
 #outline()
 
 
-= Objetivos
+= Objetivos e História da Teoria de Números
 
-A Teoria dos Números é uma área matemática que é primariamente destinada a estudar
-os números naturais, explorando os padrões e estruturas fundamentais destes mesmos,
-havendo um particular foco dentro do conceito de número primo e as suas relações
-com a divisibilidade dos outros números.
+A Teoria dos Números é uma área matemática que é destinada a estudar
+os números naturais, explorando os padrões e estruturas fundamentais destes mesmos.
 
 A Teoria dos Números apresenta-se como uma das primeiras
 áreas de conhecimento matemático humano, havendo mesmo registo em pequenas
-placas de barro fenícias. Grandes mentes passaram por esta área como Carl Gauss
+placas de barro fenícias de pequenos sistemas de numeração. Grandes mentes passaram por esta área como Euclides, Carl Gauss
 e Ramanujan, revelando-se uma área extremamente produtiva do ponto de vista
 matemático ainda hoje em dia, podendo-se verificar uma enorme quantidade
 de medalhas e prémios prestigiantes nos últimos tempos.
@@ -41,27 +39,21 @@ A Teoria dos Números é uma área onde perguntas simples conseguem ser absoluta
 impossíveis de resolver, tendo assim de se recorrer a imensas áreas diversas
 da matemática para responder a perguntas como a proposta por Fermat, onde este
 conjecturara que não seria possível encontrar números $(x,y,z)$ tais que
-a equação $x^n + y^n = z^n$ a partir de $n > 2$, ou como a Conjectura de Goldbach,
+$x^n + y^n = z^n$ a partir de $n > 2$, ou como a #strong("Conjectura de Goldbach"),
 que afirma que qualquer número par maior que 2 pode ser escrito como a soma de dois números
 primos, e que ainda continua por resolver. São afirmações como esta
 que revelam a simplicidade das afirmações tidas,
 podendo estas ser entendidas por alunos de 3º ciclo de escolaridade, mas no
-entanto só resolvidas pelos mestres absolutos da área.
+entanto só resolvidas pelos mestres absolutos de várias áreas.
 
 A Teoria dos Números possui uma história algo fora do comum; até ao século
-passado, esta seria uma área desprovida de qualquer tipo de interesses comerciais,
+passado, esta seria uma área desprovida de qualquer tipo de interesses sociais,
 havendo mesmo matemáticos como Harvey gabando-se da "pureza" inalcançável
 da área. Ora, com o advento dos computadores, mais longe da verdade não se poderia
 estar, dado que as nossas comunicações digitais somente se revelam seguras porque
 possuímos criptografia que, pondo os detalhes de engenharia à parte, está assente
 na enorme complexidade que se revela nos problemas de fatorização dos números
 naturais.
-
-Hoje em dia a Teoria dos Números pode ser dividida entre uma área aplicada e
-uma área pura; dentro da matemática pura estuda-se os números e as relações e
-padrões entre eles de forma desinteressada com a realidade, enquanto que na
-área aplicada estuda-se questões algorítmicas de fatorização e algoritmos
-de criptografia e até mesmo a quebra deles.
 
 
 = Definições Fundamentais da Teoria
@@ -73,10 +65,10 @@ moderna.
 = O conjunto dos naturais e a divisibilidade
 
 A estrutura de definições de Teoria dos Números cresce a partir do conceito
-de número natural: $N = {1, 2, dots}$. Dentro deste conjunto o estudo da divisibilidade
-entre os números acaba por fazer grande parte do estudo nesta área, onde
-por divisibilidade entendemos pela pergunta de se um número natural $a$ pode ser
-escrito como $a = b c$ ou não. Por exemplo, o número $12 = 4 \cdot 3$ é divisível por
+de número natural, o qual o conjuto é representado por $math.bb(N) = {1, 2, dots}$. Dentro deste conjunto o estudo da divisibilidade
+entre os números antigamente era um dos principais pontos de estudo nesta área, onde
+por divisibilidade entendemos pela pergunta de se um número natural $n$ pode ser
+escrito como $n = b c$ ou não. Por exemplo, o número $12 = 4 \cdot 3$ é divisível por
 $4$; no entanto, o número $3$ só é divisível por $1$ e mais nenhum número.
 
 Este conceito do estudo da divisibilidade, assim como a necessidade de divisão
@@ -84,8 +76,9 @@ de terrenos agrícolas e mercantis, levou ao estudo deste tipo de relações na
 civilização antiga. O pensador Euclides da Antiga Grécia, no seu monumental
 trabalho "Os Elementos", dedicou-se a pensar sobre estas questões da divisibilidade.
 
-O primeiro registo do algoritmo de divisão. Este afirma que dado um par de números
-naturais $(a,b)$ onde $b < a$, podemos então escrever $a = b q + r$ onde $0 \leq r < b$.
+Euclides inventaria dos primeiros algoritmos de divisão para
+naturais $(a,b)$ onde $b < a$, de acordo com o algoritmo euclides
+podemos então escrever $a = b q + r$ onde $0 \leq r < b$.
 Como por exemplo, repare-se que se tivermos o par $(7,3)$, temos que
 $7 = 2 \cdot 3 + 1$.
 
@@ -94,9 +87,9 @@ $7 = 2 \cdot 3 + 1$.
 Dentro deste estudo da divisibilidade, naturalmente nos perguntamos quais são os
 números que não são divisíveis, por outras palavras, quais são os números $a$ tais
 que não seja possível escrever $a = b c$, onde $b$ e $c$ são números diferentes
-(onde por questões técnicas assume-se sempre $b,c \ne 1$).
+(onde por questões técnicas assume-se sempre $b,c > 1$).
 Nesta área, estes números conhecem-se como números primos.
-Os números primos são: $2, 3, 5, 7, 11, dots$, onde excluímos o número $1$. Por oposição,
+Os números primos são: $2, 3, 5, 7, 11, ...$, onde excluímos o número $1$. Por oposição,
 temos o conceito de números compostos, que são os que não são primos, ou seja,
 os que são divisíveis, como por exemplo $12 = 3 dot 4$.
 
@@ -106,21 +99,23 @@ os que são divisíveis, como por exemplo $12 = 3 dot 4$.
 Ideias naturalmente associadas ao contexto de divisibilidade são os conceitos de máximo divisor comum e mínimo múltiplo
 comum, que normalmente se denotam respetivamente $m d c(a,b)$ e $m m c(a,b)$ para números naturais $a,b$. Para calcular o $m d c(a,b)$ usa-se o algoritmo de Euclides, que se revela extremamente eficiente, dado que se procede computando uma sequência de números $(r_i)_{i \in N}$ onde $N$ é um conjunto finito da seguinte forma:
 Seja $a$ e $b$ dois números naturais com $a > b$. Aplicamos o algoritmo da divisão sucessivamente:
-$a = b q_1 + r_1$
-$b = r_1 q_2 + r_2$
-$dots$
-$r_{n-2} = r_{n-1} q_n + r_n$
-onde $r_n$ é o último resto não nulo. O $m d c(a,b)$ é o valor de $r_n$.
+$
+#align(
+	a &= b q_1 + r_1\\
+	b &= r_1 q_2 + r_2\\
+	& ... \\
+	r_{n-2} &= r_{n-1} q_n + r_n
+)
+$
+onde $r_n$ é o último resto não nulo da sequencia de restos. O $m d c(a,b)$ é o valor de $r_n$.
 
 Com este valor podemos calcular o $m m c(a,b)$ usando uma identidade útil:
 $m m c(a,b) = (abs(a dot b)) / m d c(a,b)$
 
 = Aritmética de Módulos e Congruências
-De facto, o conceito de resto encontra-se de tal forma estudado que existe o que nós chamamos de aritmética modular. Tal faz-se através do conjunto $\ZZ / (n \ZZ) = \{[0], dots, [n-1]\}$ onde $n$ é um número natural, e $[i] = \{ k dot n + i : k \in \ZZ \}$. Podemos definir uma aritmética neste conjunto através da operação $+$ onde nós definimos $[i] + [j] = [i+j]$ para $[i],[j] \in \ZZ / (n \ZZ)$. Para dizermos que consideramos o conjunto com estas operações, utilizamos a notação $(\ZZ / (n \ZZ), +)$. Tal aritmética normalmente chama-se "aritmética de relógio" e este nome deve-se ao facto de se considerarmos a aritmética $(\ZZ / (12 \ZZ), +)$, pois tal funciona como se fosse um relógio. Note-se como esta analogia se revela: suponha que são 11 da noite, então o seu relógio indicaria o ponteiro nas 11 e o nosso sistema iria revelar-se como $[11]$. Imagine que um colega seu diz-lhe que se encontra consigo daqui a 35 horas. Pode começar a contar os ponteiros no relógio para saber as horas, mas se usar a aritmética modular pode-se fazer:
+De facto, o conceito de resto encontra-se de tal forma estudado que existe o que nós chamamos de aritmética modular our aritmética de restos. Tal faz-se através do conjunto $math.bb(Z) / (n math.bb(Z)) = {[0], dots, [n-1]}$ onde $n$ é um número natural, e $[i] = { k dot n + i : k \in math.bb(Z) }$. Podemos definir uma aritmética neste conjunto através da operação $+$ onde nós definimos $[i] + [j] = [i+j]$ para $[i],[j] \in math.bb(Z) / n math.bb(Z)$. Para dizermos que consideramos o conjunto com estas operações, utilizamos a notação $(math.bb(Z) / (n math.bb(Z)), +)$. Tal aritmética normalmente chama-se "aritmética de relógio" e este nome deve-se ao facto de se considerarmos a aritmética $(math.bb(Z)/ (12 math.bb(Z)), +)$, pois tal funciona como se fosse um relógio. Note-se como esta analogia se revela: suponha que são 11 da noite, então o seu relógio indicaria o ponteiro nas 11 e o nosso sistema iria revelar-se como $[11]$. Imagine que um colega seu diz-lhe que se encontra consigo daqui a 35 horas. Pode começar a contar os ponteiros no relógio para saber as horas, mas se usar a aritmética modular pode-se fazer:
 $[11] + [35] = [11 + 35] = [46]$. Como $46 = 3 dot 12 + 10$, temos $[46] = [10]$.
 Então o seu colega vai-se encontrar consigo às 10 da manhã do dia a seguir.
-
-= Resultados Essenciais
 
 No início dos estudos da fatorização em sistemas
 algébricos de números, o estudo da fatorização
