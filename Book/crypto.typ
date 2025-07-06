@@ -62,7 +62,7 @@ Iremos fazer uma pequena digressão pelos principais conceitos de Teoria dos
 Números, primeiro conceitos clássicos e depois conceitos da teoria de números
 moderna.
 
-== O conjunto dos naturais e a divisibilidade
+=== O conjunto dos naturais e a divisibilidade
 
 A estrutura de definições de Teoria dos Números cresce a partir do conceito
 de número natural, o qual o conjuto é representado por $bb(N) = {1, 2, dots}$. Dentro deste conjunto o estudo da divisibilidade
@@ -82,7 +82,7 @@ podemos então escrever $a = b q + r$ onde $0 \leq r < b$.
 Como por exemplo, repare-se que se tivermos o par $(7,3)$, temos que
 $7 = 2 \cdot 3 + 1$.
 
-== Números Primos e Números Compostos
+=== Números Primos e Números Compostos
 
 Dentro deste estudo da divisibilidade, naturalmente nos perguntamos quais são os
 números que não são divisíveis, por outras palavras, quais são os números $a$ tais
@@ -94,7 +94,7 @@ temos o conceito de números compostos, que são os que não são primos, ou sej
 os que são divisíveis, como por exemplo $12 = 3 dot 4$.
 
 
-== O Máximo Divisor Comum e o Mínimo Múltiplo Comum
+=== O Máximo Divisor Comum e o Mínimo Múltiplo Comum
 
 Ideias naturalmente associadas ao contexto de divisibilidade são os conceitos de máximo divisor comum e mínimo múltiplo
 comum, que normalmente se denotam respetivamente $m d c(a,b)$ e $m m c(a,b)$ para números naturais $a,b$. Para calcular o $m d c(a,b)$ usa-se o algoritmo de Euclides, que se revela extremamente eficiente, dado que se procede computando uma sequência de números $(r_i)_{i \in N}$ onde $N$ é um conjunto finito da seguinte forma:
@@ -111,7 +111,7 @@ onde $r_n$ é o último resto não nulo da sequencia de restos. O $m d c(a,b)$ �
 Com este valor podemos calcular o $m m c(a,b)$ usando uma identidade útil:
 $m m c(a,b) = (abs(a dot b)) / m d c(a,b)$
 
-== Aritmética de Módulos e Congruências
+=== Aritmética de Módulos e Congruências
 De facto, o conceito de resto encontra-se de tal forma estudado que existe o que nós chamamos de aritmética modular ou aritmética de restos. Tal faz-se através do conjunto $bb(Z) / (n bb(Z)) = {[0], dots, [n-1]}$ onde $n$ é um número natural, e $[i] = { k dot n + i : k in bb(Z) }$. Podemos definir uma aritmética neste conjunto através da operação $+$ onde nós definimos $[i] + [j] = [i+j]$ para $[i],[j] in bb(Z) / n bb(Z)$. Para dizermos que consideramos o conjunto com estas operações, utilizamos a notação $(bb(Z) / (n bb(Z)), +)$. Tal aritmética normalmente chama-se "aritmética de relógio" e este nome deve-se ao facto de se considerarmos a aritmética $(bb(Z)/ (12 bb(Z)), +)$, pois tal funciona como se fosse um relógio. Note-se como esta analogia se revela: suponha que são 11 da noite, então o seu relógio indicaria o ponteiro nas 11 e o nosso sistema iria revelar-se como $[11]$. Imagine que um colega seu diz-lhe que se encontra consigo daqui a 35 horas. Pode começar a contar os ponteiros no relógio para saber as horas, mas se usar a aritmética modular pode-se fazer:
 $[11] + [35] = [11 + 35] = [46]$. Como $46 = 3 dot 12 + 10$, temos $[46] = [10]$.
 Então o seu colega vai-se encontrar consigo às 10 da manhã do dia a seguir.
@@ -314,7 +314,7 @@ a meios mais antigos.
 - Magma: Software closed-source que possui uma variedade de propriedades algébricas associadas à Teoria dos Números.
 
 
-= Bibliografia
+= Bibliografia Recomendada
 
 == Introdução
 
