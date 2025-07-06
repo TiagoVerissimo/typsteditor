@@ -56,16 +56,16 @@ na enorme complexidade que se revela nos problemas de fatorização dos números
 naturais.
 
 
-= Definições Fundamentais da Teoria
+== Definições Fundamentais da Teoria
 
 Iremos fazer uma pequena digressão pelos principais conceitos de Teoria dos
 Números, primeiro conceitos clássicos e depois conceitos da teoria de números
 moderna.
 
-= O conjunto dos naturais e a divisibilidade
+== O conjunto dos naturais e a divisibilidade
 
 A estrutura de definições de Teoria dos Números cresce a partir do conceito
-de número natural, o qual o conjuto é representado por $math.bb(N) = {1, 2, dots}$. Dentro deste conjunto o estudo da divisibilidade
+de número natural, o qual o conjuto é representado por $bb(N) = {1, 2, dots}$. Dentro deste conjunto o estudo da divisibilidade
 entre os números antigamente era um dos principais pontos de estudo nesta área, onde
 por divisibilidade entendemos pela pergunta de se um número natural $n$ pode ser
 escrito como $n = b c$ ou não. Por exemplo, o número $12 = 4 \cdot 3$ é divisível por
@@ -82,7 +82,7 @@ podemos então escrever $a = b q + r$ onde $0 \leq r < b$.
 Como por exemplo, repare-se que se tivermos o par $(7,3)$, temos que
 $7 = 2 \cdot 3 + 1$.
 
-= Números Primos e Números Compostos
+== Números Primos e Números Compostos
 
 Dentro deste estudo da divisibilidade, naturalmente nos perguntamos quais são os
 números que não são divisíveis, por outras palavras, quais são os números $a$ tais
@@ -94,33 +94,31 @@ temos o conceito de números compostos, que são os que não são primos, ou sej
 os que são divisíveis, como por exemplo $12 = 3 dot 4$.
 
 
-= O Máximo Divisor Comum e o Mínimo Múltiplo Comum
+== O Máximo Divisor Comum e o Mínimo Múltiplo Comum
 
 Ideias naturalmente associadas ao contexto de divisibilidade são os conceitos de máximo divisor comum e mínimo múltiplo
 comum, que normalmente se denotam respetivamente $m d c(a,b)$ e $m m c(a,b)$ para números naturais $a,b$. Para calcular o $m d c(a,b)$ usa-se o algoritmo de Euclides, que se revela extremamente eficiente, dado que se procede computando uma sequência de números $(r_i)_{i \in N}$ onde $N$ é um conjunto finito da seguinte forma:
 Seja $a$ e $b$ dois números naturais com $a > b$. Aplicamos o algoritmo da divisão sucessivamente:
 $
-#align(
-	a &= b q_1 + r_1\\
-	b &= r_1 q_2 + r_2\\
-	& ... \\
-	r_{n-2} &= r_{n-1} q_n + r_n
-)
+a &= b q_1 + r_1\
+b &= r_1 q_2 + r_2\
+& dots.v \
+r_{n-2} &= r_{n-1} q_n + r_n
+
 $
 onde $r_n$ é o último resto não nulo da sequencia de restos. O $m d c(a,b)$ é o valor de $r_n$.
 
 Com este valor podemos calcular o $m m c(a,b)$ usando uma identidade útil:
 $m m c(a,b) = (abs(a dot b)) / m d c(a,b)$
 
-= Aritmética de Módulos e Congruências
-De facto, o conceito de resto encontra-se de tal forma estudado que existe o que nós chamamos de aritmética modular our aritmética de restos. Tal faz-se através do conjunto $math.bb(Z) / (n math.bb(Z)) = {[0], dots, [n-1]}$ onde $n$ é um número natural, e $[i] = { k dot n + i : k \in math.bb(Z) }$. Podemos definir uma aritmética neste conjunto através da operação $+$ onde nós definimos $[i] + [j] = [i+j]$ para $[i],[j] \in math.bb(Z) / n math.bb(Z)$. Para dizermos que consideramos o conjunto com estas operações, utilizamos a notação $(math.bb(Z) / (n math.bb(Z)), +)$. Tal aritmética normalmente chama-se "aritmética de relógio" e este nome deve-se ao facto de se considerarmos a aritmética $(math.bb(Z)/ (12 math.bb(Z)), +)$, pois tal funciona como se fosse um relógio. Note-se como esta analogia se revela: suponha que são 11 da noite, então o seu relógio indicaria o ponteiro nas 11 e o nosso sistema iria revelar-se como $[11]$. Imagine que um colega seu diz-lhe que se encontra consigo daqui a 35 horas. Pode começar a contar os ponteiros no relógio para saber as horas, mas se usar a aritmética modular pode-se fazer:
+== Aritmética de Módulos e Congruências
+De facto, o conceito de resto encontra-se de tal forma estudado que existe o que nós chamamos de aritmética modular ou aritmética de restos. Tal faz-se através do conjunto $bb(Z) / (n bb(Z)) = {[0], dots, [n-1]}$ onde $n$ é um número natural, e $[i] = { k dot n + i : k in bb(Z) }$. Podemos definir uma aritmética neste conjunto através da operação $+$ onde nós definimos $[i] + [j] = [i+j]$ para $[i],[j] in bb(Z) / n bb(Z)$. Para dizermos que consideramos o conjunto com estas operações, utilizamos a notação $(bb(Z) / (n bb(Z)), +)$. Tal aritmética normalmente chama-se "aritmética de relógio" e este nome deve-se ao facto de se considerarmos a aritmética $(bb(Z)/ (12 bb(Z)), +)$, pois tal funciona como se fosse um relógio. Note-se como esta analogia se revela: suponha que são 11 da noite, então o seu relógio indicaria o ponteiro nas 11 e o nosso sistema iria revelar-se como $[11]$. Imagine que um colega seu diz-lhe que se encontra consigo daqui a 35 horas. Pode começar a contar os ponteiros no relógio para saber as horas, mas se usar a aritmética modular pode-se fazer:
 $[11] + [35] = [11 + 35] = [46]$. Como $46 = 3 dot 12 + 10$, temos $[46] = [10]$.
 Então o seu colega vai-se encontrar consigo às 10 da manhã do dia a seguir.
 
-No início dos estudos da fatorização em sistemas
-algébricos de números, o estudo da fatorização
+O estudo da fatorização de numeros
 revela-se como um interesse natural, dado que as
-questões de divisibilidade de números rapidamente
+questões de divisibilidade de números rapidamente se
 revelam problemas desafiantes.
 
 Um dos primeiros teoremas produzidos neste âmbito
@@ -129,7 +127,7 @@ o seu famoso Teorema Fundamental da Aritmética.
 
 #theorem[
 Dado um número inteiro $n > 1$, temos que este número pode ser fatorizado por números primos
-$p_1,dots,p_k$, sendo assim $n = p_1 dot dots dot p_k$ e estes números $p_1, dots p_k$ são únicos.
+$p_1,dots,p_k$ tais que $n = p_1 dot dots dot p_k$ e estes números $p_1, dots p_k$ são únicos para esta fatorização.
 ]
 
 Desta forma, nós dizemos que os primos são os átomos dos números
@@ -139,30 +137,26 @@ Este é o estudo local dos sistemas numéricos.
 Note-se por exemplo o número
 $30 = 2 dot 3 dot 5$ ou $6 = 2 dot 3$.
 
-
 Neste tipo de trabalhos envolvendo a fatorização de números, tipicamente estuda-se se existem fatorizações
 para todos os números e se estas são únicas para todos os números;
 de certa forma, andamos a perceber quais são os átomos de um dado
-sistema de números. Uma das formas para estudar a distribuição
+sistema de números(digo sistema de numeros porque existem outras estruturas algébricas que não $bb(Z)$ onde o estudo da factorização num sentido mais generalizado é interessante, como iremos ver em álgebra abstracta). Uma das formas para estudar a distribuição
 destes átomos nos sistemas numéricos é estudando a sua distribuição
 nos sistemas algébricos. Este é o estudo global dos átomos
 em sistemas algébricos. O principal teorema no estudo
-global do sistema
-dos números inteiros, possuímos o Teorema
-da Distribuição dos Primos:
+global do sistema dos números inteiros é o Teorema da Distribuição dos Primos:
 
 #theorem[
-Seja $\pi(n)$ o número de primos que antecede $n$, então
+Seja $pi(n)$ o número de primos que antecede $n$, então
 assintoticamente temos que o número de primos é dado por
-$\pi(n) \sim n/\ln(n)$.
+$pi(n) ~ n/ln(n)$.
 ]
-
 
 Temos teoremas como o referido acima que descrevem o número de
 primos, mas nunca sabemos bem as posições exatas ou quais são
 os números primos e os números compostos de forma imediata.
 Para fazer esta decisão precisamos sempre de algoritmos
-sofisticados que nem são rápidos ou então são probabilísticos.
+sofisticados que não são rápidos ou então são probabilísticos.
 Existe assim um grande conflito entre o nosso conhecimento dos
 números primos em termos locais, quer isto dizer em termos
 de fatorizações, e em termos globais, quer isto dizer a sua
@@ -171,8 +165,6 @@ Hipótese de Riemann prende-se
 precisamente pelo facto de esta nos vir a trazer uma perceção
 global sobre os números primos.
 
-Alguns teoremas fundacionais em Teoria dos Números
-relativos à caracterização de números primos.
 Uma das primeiras caracterizações de números
 primos é dada por:
 
@@ -181,7 +173,6 @@ Se $p$ é um número primo, então para qualquer número
 natural $a$ que não é divisível por $p$, temos que
 $a^(p-1) <==> 1 (mod p)$
 ]
-
 
 Temos a generalização dada por Euler da caracterização
 de números primos dada por Fermat:
@@ -194,41 +185,33 @@ Se $m d c(a,n)=1$, então
 temos que $a^(phi(n)) <==> 1 (mod n)$.
 ]
 
-
 Outro resultado que eu gostaria de mencionar
 seria o Teorema de Wilson, onde é feita uma caracterização
-suficiente e necessária dos números primos:
+suficiente e necessária, no entanto computacionalmente muito despendiciosa, dos números primos:
 
 #theorem[
-Um número $p$ é primo
-se e só se $(p-1)! <==> -1 (mod p)$
+Seja $p$ é um natural, então $p$ é primo se e só se $(p-1)! eq.triple -1 (mod p)$
 ]
 
+Ainda relacionado com o conceito de número primos, convido os leitores a informarem-se
+sobre o conceito de números perfeitos e número de Mersenne e a sua relação com os números
+primos, onde podemos encontrar conjecturas simples e poderosas como:
 
-Por fim, convido os leitores a irem investigar
-por iniciativa própria o conceito de número perfeito
-e número de Mersenne e a sua relação com os números
-primos, onde podemos encontrar conjecturas
-simples e poderosas como:
+- *Conjectura de Goldbach*: Todos os números naturais pares maiores que 2 podem ser escritos como uma soma de 2 números primos,
+- *Números Impares Perfeitos*: Será que existe um número perfeito ímpar?,
+- *Números Primos Gémeos*: Existem infinitos números primos que diferem exatamente por 2?
 
-- Conjectura de Goldbach: Todos os números naturais pares maiores que 2 podem ser escritos como uma soma de 2 números primos.
-- Odd Perfect Number: Será que existe um número perfeito ímpar?
-- Twin Prime Conjecture: Existem infinitos números primos que diferem exatamente por 2?
+Para além dos números primos, o outro grande alvo de estudo é dado pelo estudo
+de equações diofantinas, ou seja, equações do tipo
 
-Para além dos números primos, o outro grande alvo
-de estudo é dado pelo estudo
-de equações diofantinas, ou seja,
-equações do tipo
-$$
-P(x_1,\dots,x_n) = 0
-$$
+$P(x_1,dots,x_n) = 0$
+
 onde $P$ é um polinómio de $n$ variáveis de grau
 arbitrário e coeficientes nos números inteiros, e
 procuramos exclusivamente soluções de números
 inteiros.
 
-Por exemplo, equações do tipo $3 x_1^2 - 7 x_2^3 = 5$
-ou $x_1^2 + x_2^2 = x_3^2$.
+Por exemplo, equações do tipo $3 x_1^2 - 7 x_2^3 = 5$ ou $x_1^2 + x_2^2 = x_3^2$.
 
 As questões que se costumam estudar nesta área
 relativamente a este tipo de equações são dadas por:
@@ -241,18 +224,13 @@ relativamente a este tipo de equações são dadas por:
 
 Alguns exemplos de equações diofantinas famosas:
 
-
-- Equações Lineares Diofantinas - $a_1 x_1 + dots + a_n x_n = c$.
-- Equação de Pell - $x^2 - D y^2 = 1$.
-- O Último Teorema de Fermat - $x^n + y^n = z^n$ para $n>2$.
-
+- *Equações Lineares Diofantinas* : $a_1 x_1 + dots + a_n x_n = c$.
+- *Equação de Pell*: $x^2 - D y^2 = 1$.
+- *Teorema de Pitágoras Generalizado* : $x^n + y^n = z^n$ para $n>2$.
 
 Muitas destas equações diofantinas revelam-se lindos
-aspetos de investigação matemática e também
-estupendas aplicações com encriptação usando
-equações diofantinas através da encriptação elíptica.
-
-Para se perceber a profundidade deste tipo de questões,
+aspetos de investigação matemática e também com
+úteis aplicações em criptografia. Para se perceber a profundidade deste tipo de questões,
 o matemático alemão David Hilbert, na sua famosa lista
 de problemas para o século 20 e 21, formulou o seu
 décimo problema:
@@ -278,28 +256,19 @@ como o Último Teorema de Fermat, demonstrado por
 Andrew Wiles, que diz, nem mais nem menos, que,
 assumindo um $n > 2$, a equação
 $$
-a^n + b^n = c^n
+x^n + y^n = z^n
 $$
-não possui soluções para nenhum número inteiro.
+não possui soluções $(x,y,z)$ para nenhum tuplo de números inteiros.
 
 
-= Investigação Moderna
+= Investigação Atual
 
 A Teoria dos Números moderna representa-se como um esforço de perceber ainda mais
 profundamente as propriedades dos números. Porém, atualmente fazemos este estudo
-dos números através do estudo de teorias abstratas que nos permitem codificar certas características dos números. Por exemplo, no estudo
-das equações diofantinas do tipo $x^n + y^n = z^n$, o matemático Andrew Wiles, através da conversão
-deste problema para equações elípticas (geometria) que depois iria ser traduzido
-às formas modulares da análise matemática, conseguiu perceber que tais equações
-não têm soluções a partir de $n>2$ no domínio dos naturais.
+dos números através do estudo de objetos abstratos que nos permitem codificar certas características dos números. 
 
 
-== Novas Estruturas e Fronteiras da Investigação
-
-A Teoria dos Números atualmente é governada pelos seguintes regimes de investigação que pretendem conectar
-estruturas abstratas à estrutura concreta de números.
-
-=== Aritmética das Curvas Elípticas
+== Aritmética das Curvas Elípticas
 
 Uma curva elíptica é uma equação cúbica como por exemplo $y^2 = x^3 + x + 1$. Estas equações apresentam propriedades
 extremamente contra-intuitivas, como por exemplo o facto de os números racionais que são soluções deste tipo de equações
@@ -329,6 +298,7 @@ O Programa de Langlands é um projeto que pretende estabelecer uma ponte entre a
 Números e a teoria de representação. Nomeadamente, consiste numa ponte que conecta a
 teoria das formas automorfas (funções harmónicas generalizadas da análise matemática) com a teoria
 das representações de Galois (representações que codificam informação aritmética de corpos de números). A dualidade entre álgebra e análise matemática é algo que há muito se tenta encontrar conexões; este programa é mais uma neste sentido, no entanto mesmo assim existem muitas outras pontes que existem e que iremos falar.
+
 
 = Ferramentas Computacionais
 
